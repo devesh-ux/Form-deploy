@@ -128,7 +128,7 @@
       top: 21.5rem;
   }
 
-  @media only screen and (max-width: 380px) {
+  @media only screen and (max-width: 700px) {
     /* For mobile: */
     .form-container{width: 350px;}
     .form-content-right{width: 350px;}
