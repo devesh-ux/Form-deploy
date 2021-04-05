@@ -8,14 +8,16 @@ import {
   faEnvelope,
   faLock,
   faEye,
-  faEyeSlash
+  faEyeSlash,
+  faCheck
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser,
   faEnvelope,
   faLock,
   faEye,
-  faEyeSlash)
+  faEyeSlash,
+  faCheck)
 
 ReactDOM.render(
   <React.StrictMode>

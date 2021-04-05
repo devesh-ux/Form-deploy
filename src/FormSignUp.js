@@ -14,8 +14,14 @@ const FormSignUp = ({ submitForm }) => {
 
     const {handleChange,values,handleSubmit,errors} = UseForm(submitForm,validate);
 
-    
+    function tickmark(values){
+      const Icon =  <FontAwesomeIcon icon = "check" />;
+      if (/\S+@\S+\.\S+/.test(values.email)) {
+        return Icon;
+      }
+    }
 
+    const Icon1 = tickmark(values);
    
     return (
        <div className="form-content-right">
@@ -34,6 +40,9 @@ const FormSignUp = ({ submitForm }) => {
                        value = {values.email}
                        onChange={handleChange}
                        />
+                       <span className="email-toogle-icon">
+                           {Icon1}
+                           </span>
                     {errors.email && <p>{errors.email}</p>}   
                </div>
                <div className="form-inputs">
@@ -43,7 +52,6 @@ const FormSignUp = ({ submitForm }) => {
                    <input
                        id = "password"
                        type = {PassInputType}
-                    //    type="password"
                        name = "password"
                        className="form-input"
                        placeholder="enter your password"
